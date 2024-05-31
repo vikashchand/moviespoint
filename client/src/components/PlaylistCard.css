@@ -1,0 +1,28 @@
+.playlist-card {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .playlist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .playlist-card h4 {
+    margin: 0 0 10px;
+  }
+  
+  .playlist-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .playlist-card li {
+    margin: 5px 0;
+  }
+  

@@ -1,0 +1,26 @@
+/* PublicPlaylistCard.css */
+
+.public-playlist-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .public-playlist-card h4 {
+    margin: 0 0 10px 0;
+  }
+  
+  .public-playlist-card p {
+    margin: 5px 0;
+  }
+  
+  .public-playlist-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .public-playlist-card li {
+    margin: 5px 0;
+  }
+  
