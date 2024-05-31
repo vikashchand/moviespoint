@@ -12,9 +12,9 @@ function Profile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/users/getprofile", { params: { id: userId } });
+        const response = await axios.get("https://moviespoint-dmby.vercel.app/api/users/getprofile", { params: { id: userId } });
         setUserData(response.data);
-        const playlistRes = await axios.get(`http://localhost:9000/api/playlist/${userId}`);
+        const playlistRes = await axios.get(`https://moviespoint-dmby.vercel.app/api/playlist/${userId}`);
         setPlayListData(playlistRes.data);
       } catch (error) {
         console.error("Error fetching data:", error);

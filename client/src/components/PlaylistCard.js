@@ -8,7 +8,7 @@ function PlaylistCard({ playlist, onDelete }) {
   const togglePrivacy = async () => {
     try {
       const updatedPrivacy = !isPublic;
-      const response = await axios.patch(`http://localhost:9000/api/playlist/update/${playlist._id}`, {
+      const response = await axios.patch(`https://moviespoint-dmby.vercel.app/api/playlist/update/${playlist._id}`, {
         public: updatedPrivacy
       });
       if (response.status === 200) {
@@ -23,7 +23,7 @@ function PlaylistCard({ playlist, onDelete }) {
 
   const deletePlaylist = async () => {
     try {
-      const response = await axios.delete(`http://localhost:9000/api/playlist/delete/${playlist._id}`);
+      const response = await axios.delete(`https://moviespoint-dmby.vercel.app/api/playlist/delete/${playlist._id}`);
       if (response.status === 200) {
         onDelete(playlist._id);
       } else {

@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:9000/api/users/create", {
+      const response = await fetch("https://moviespoint-dmby.vercel.app/api/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

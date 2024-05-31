@@ -10,7 +10,7 @@ function Public() {
   useEffect(() => {
     const fetchPublicPlaylists = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/playlist/public/types');
+        const response = await axios.get('https://moviespoint-dmby.vercel.app/api/playlist/public/types');
         setPublicPlaylists(response.data);
       } catch (error) {
         console.error('Error fetching public playlists:', error);

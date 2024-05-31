@@ -24,7 +24,7 @@ const Login = ({ history }) => {
   
     try {
       
-      const response = await fetch("http://localhost:9000/api/users/login", {
+      const response = await fetch("https://moviespoint-dmby.vercel.app/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

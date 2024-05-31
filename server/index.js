@@ -10,7 +10,14 @@ connectDB();
 const app = express();
 const cors = require('cors');
 
-app.use(cors()); // Enable CORS for all routes
+const corsOptions = {
+    origin: 'https://moviespoint.vercel.app',
+    credentials: true,
+    optionSuccessStatus: 200,
+  };
+  app.use(cors(corsOptions));
+
+
 const PORT = process.env.PORT || 5000;
 
 // Middleware

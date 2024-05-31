@@ -18,7 +18,7 @@ const MovieInfo = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('authToken');
       console.log(token);
-      const response = await fetch(`http://localhost:9000/api/playlist/${userId}`, {
+      const response = await fetch(`https://moviespoint-dmby.vercel.app/api/playlist/${userId}`, {
         method: 'GET',
         headers: {
           'Authorization': token
@@ -47,7 +47,7 @@ const MovieInfo = () => {
         year: movieData.Year
       };
 
-      const response = await fetch(`http://localhost:9000/api/playlist/${playlistId}`, {
+      const response = await fetch(`https://moviespoint-dmby.vercel.app/api/playlist/${playlistId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const MovieInfo = () => {
         ]
       };
   
-      const response = await fetch('http://localhost:9000/api/playlist/create', {
+      const response = await fetch('https://moviespoint-dmby.vercel.app/api/playlist/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
