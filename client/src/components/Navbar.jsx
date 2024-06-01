@@ -41,7 +41,7 @@ const Navbar = () => {
               <NavLink to="/search" onClick={handleNavLinkClick}>Search</NavLink>
             </li>
             <li>
-              <NavLink to="/publicPlaylist" onClick={handleNavLinkClick}>PublicPlaylist</NavLink>
+              <NavLink to="/publicPlaylist" onClick={handleNavLinkClick}>Public</NavLink>
             </li>
             <li>
               <NavLink to="/profile" onClick={handleNavLinkClick}>Profile</NavLink>
