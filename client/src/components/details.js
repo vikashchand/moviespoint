@@ -148,7 +148,7 @@ const MovieInfo = () => {
   return (
     <div className="maincontainer">
     <Navbar/>
-    <div className="container mt-8">
+    <div className="containers mt-8">
       {movieData && (
         <div className="row">
           <div className="col-md-4">
