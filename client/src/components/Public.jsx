@@ -4,6 +4,7 @@ import './Profile.css';
 
 import PublicPlaylistCard from './PublicPlaylistCard';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 function Public() {
   const [publicPlaylists, setPublicPlaylists] = useState([]);
 
@@ -21,10 +22,12 @@ function Public() {
   }, []);
 
   return (
+    <div className="maincontainer">
+    
+    <Navbar/>
+   
     <div className="profile-container">
-    <Link to="/" className="home-link">Home</Link>
-    <br></br>
-    <br></br>
+   
     
       <h2>Public Playlists</h2>
       <div className="playlist-container">
@@ -32,6 +35,7 @@ function Public() {
           <PublicPlaylistCard key={playlist._id} playlist={playlist} />
         ))}
       </div>
+    </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import PlaylistCard from './PlaylistCard';
 import './Profile.css';
+import Navbar from './Navbar';
 
 function Profile() {
   const userId = localStorage.getItem("userId");
@@ -29,8 +30,11 @@ function Profile() {
   };
 
   return (
-    <div className="profile-container">
-      <Link to="/" className="home-link">Home</Link>
+    <div className="maincontainer">
+
+
+     <Navbar/>
+     <div className="profile-container">
       <br></br>
       <br></br>
       
@@ -46,6 +50,7 @@ function Profile() {
           <PlaylistCard key={playlist._id} playlist={playlist} onDelete={handleDelete} />
         ))}
       </div>
+    </div>
     </div>
   );
 }

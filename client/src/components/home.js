@@ -6,6 +6,7 @@ import ListMovie from './ListMovie';
 import './HomePage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser ,faPlay,faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+import Navbar from './Navbar';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -47,47 +48,26 @@ const HomePage = () => {
   }, [toSearch]);
 
   return (
+    <div className="maincontainer">
+     <Navbar/>
     <div className="container-fluid movie-app">
-      <div className="row align-items-center mt-4 mb-4">
-        <div className="col-12 col-md-8">
-          <ListHeading heading="Movies" />
-        </div>
-        
-        <div className="col-12 col-md-4 d-flex justify-content-end align-items-center">
+   
+      
+      <div className="welcome-message">
+        <h3>Welcome to the Playlist App</h3>
+        <h4>Please search for a movie...</h4>
+        <div className=" align-items-center">
           
          
         <SearchBox toSearch={toSearch} setToSearch={setToSearch} />
 
-         
-          <button onClick={() => {navigate('/publicPlaylist')}}  className="button-75">
-         Public
-        </button>
-
-        <span></span>
-
-
-          <button onClick={() => {navigate('/profile')}}  className="button-75">
-            profile
-          </button>
-
-          <span></span>
         
-          <div className="mx-1">
-          
         </div>
-        <button className="btn btn-danger" onClick={handleLogout}>
-          <FontAwesomeIcon icon={faSignOutAlt} size="lg" />
-         
-          </button>
-        </div>
-      </div>
-      <div className="welcome-message">
-        <h3>Welcome to the Playlist App</h3>
-        <h4>Please search for a movie...</h4>
       </div>
       <div className="row movie-list">
         <ListMovie movies={movies} />
       </div>
+    </div>
     </div>
   );
 };

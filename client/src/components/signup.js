@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-
+import work from '../assets/work.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import './login.css';
 const Signup = () => {
   const [credentials, setCredentials] = useState({
     username: "",
@@ -52,14 +54,23 @@ const Signup = () => {
   
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      minHeight: "100vh",
-    }}>
-      <div>
-      <h2>Signup</h2>
+    <div className="container">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    <div className="modal">
+    <div className="modal-container">
+      <div className="modal-left">
+        <h1 className="modal-title">Login</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formUsername">
           <Form.Label>Username:</Form.Label>
@@ -99,6 +110,11 @@ const Signup = () => {
           Already have an account? <a href="/login">Log In</a>
         </p>
       </Form>
+      </div>
+      <div className="modal-right">
+            <img src={work} alt="" />
+          </div>
+        </div>
       </div>
     </div>
   );

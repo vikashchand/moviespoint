@@ -19,12 +19,25 @@ import {
     // Route,
     // Link,
   } from "react-router-dom";
+import LandingPage from './components/LandingPage';
+import Navbar from './components/Navbar';
 
 
 const App = () =>{
+
+    
     const router = createBrowserRouter([
+
         {
             path: "/",
+            element: (
+                <div>
+                   <LandingPage/>
+                </div>
+            )
+        },
+        {
+            path: "/search",
             element: (
                 <div>
                     <HomePage />
@@ -74,10 +87,13 @@ const App = () =>{
         }
     ])
     return (
-        <div className='container-fluid movie'>
-             <RouterProvider router={router} />
-            
-        </div>
+       <RouterProvider router={router}>
+       <Navbar />
+       <div className='container-fluid movie'>
+        
+       
+       </div>
+     </RouterProvider>
     );
 };
 export default App;

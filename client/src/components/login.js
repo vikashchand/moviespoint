@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
+
+
+
+import { useFormik } from "formik";
+import { login } from "../assets/Schemas/index"
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import axios from 'axios';
+import work from '../assets/work.jpg';
+
+
+import './login.css';
 const Login = ({ history }) => {
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
   });
 
+
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
@@ -58,47 +74,58 @@ const Login = ({ history }) => {
       setError("An error occurred. Please try again.");
     }
   };
-
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-      }}
-    >
-      <div>
-        <h2>Login</h2>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formUsername">
-            <Form.Label>Username:</Form.Label>
-            <Form.Control
-              type="text"
-              name="username"
-              value={loginData.username}
-              onChange={handleInputChange}
-            />
-          </Form.Group>
-
-          <Form.Group controlId="formPassword">
-            <Form.Label>Password:</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              value={loginData.password}
-              onChange={handleInputChange}
-            />
-          </Form.Group>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
-        </Form>
-        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    <div className="container">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <div className="modal">
+        <div className="modal-container">
+          <div className="modal-left">
+            <h1 className="modal-title">Login</h1>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formUsername">
+                <Form.Label>Username:</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="username"
+                  value={loginData.username}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+  
+              <Form.Group controlId="formPassword">
+                <Form.Label>Password:</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  value={loginData.password}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+              {error && <p style={{ color: "red" }}>{error}</p>}
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Form>
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+          </div>
+          <div className="modal-right">
+            <img src={work} alt="" />
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+}  
 
 export default Login;
