@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from 'react-router-dom';
 import { Button, Modal, Form } from 'react-bootstrap';
+import Navbar from './Navbar';
 
 const MovieInfo = () => {
   const [movieData, setMovieData] = useState(null);
@@ -145,6 +146,8 @@ const MovieInfo = () => {
   }, [id]);
 
   return (
+    <div className="naincontainer">
+    <Navbar/>
     <div className="container mt-5">
       {movieData && (
         <div className="row">
@@ -234,6 +237,7 @@ const MovieInfo = () => {
         </Form>
       </Modal.Body>
     </Modal>
+  </div>
   </div>
 );
 };
