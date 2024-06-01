@@ -155,16 +155,16 @@ const MovieInfo = () => {
             <h2>{movieData.Title}</h2>
             <p>
               <strong>Year:</strong> {movieData.Year}<br />
-              <strong>Rated:</strong> {movieData.Rated}<br />
+          
               <strong>Released:</strong> {movieData.Released}<br />
               <strong>Runtime:</strong> {movieData.Runtime}<br />
               <strong>Genre:</strong> {movieData.Genre}<br />
               <strong>Director:</strong> {movieData.Director}<br />
-              <strong>Writer:</strong> {movieData.Writer}<br />
-              <strong>Actors:</strong> {movieData.Actors}<br />
+          
+     
               <strong>Language:</strong> {movieData.Language}<br />
               <strong>Country:</strong> {movieData.Country}<br />
-              <strong>Awards:</strong> {movieData.Awards}<br />
+             
               <strong>IMDb Rating:</strong> {movieData.imdbRating} ({movieData.imdbVotes} votes)<br />
             </p>
             <Button variant="primary" onClick={handleAddToPlaylist}>
