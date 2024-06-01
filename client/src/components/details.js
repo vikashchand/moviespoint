@@ -146,7 +146,7 @@ const MovieInfo = () => {
   }, [id]);
 
   return (
-    <div className="naincontainer">
+    <div className="maincontainer">
     <Navbar/>
     <div className="container mt-5">
       {movieData && (
