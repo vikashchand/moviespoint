@@ -54,13 +54,9 @@ This is a movie library web application created using the MERN stack (MongoDB, E
 ## Deployment
 
 The application is deployed on Vercel. You can access it [here](https://moviespoint.vercel.app/).
-![image](https://github.com/vikashchand/moviespoint/assets/72156896/25c16b96-140e-46fc-817a-a34f16d9e250)
 
-![image](https://github.com/vikashchand/moviespoint/assets/72156896/37b1565d-7b4f-4c4d-b72e-6d04014596be)
-
-![image](https://github.com/vikashchand/moviespoint/assets/72156896/de3f995c-07b2-4521-91f1-a86963ce5b75)
-
-![image](https://github.com/vikashchand/moviespoint/assets/72156896/6e856cc7-3ef7-4d19-ac8a-98fe9e1b834a)
+![image](https://github.com/vikashchand/moviespoint/assets/72156896/5aba4742-d3ef-4ea6-950f-55c2fefd2888)
+![image](https://github.com/vikashchand/moviespoint/assets/72156896/e23a5743-42fd-4f2b-b747-56d627fa0772)
 
 
 
